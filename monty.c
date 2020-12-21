@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 /**
  * main - monty interpreter main function
  * @argc: number of arguments
@@ -38,9 +38,10 @@ int main(int argc, char *argv[])
 			{
 				printerror(2, line_number);
 			}
-			op_int_evaluator(token_op, &stack, line_number);
+			op_eva(token_op, &stack, line_number);
 			break;
 		}
 		line_number++;
 }
 return (0);
+}

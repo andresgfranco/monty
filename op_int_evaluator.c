@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 /**
  * op_eva - function that will evaluate
  * @given_opcode: the opcode provided

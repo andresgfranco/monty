@@ -1,4 +1,4 @@
-#include "monty_header.h"
+#include "monty.h"
 
 /**
  * op_push - Function that pushes an element
@@ -49,5 +49,5 @@ while ((aux) != NULL)
 printf("%d\n", (aux)->n);
 (aux) = (aux)->next;
 }
-(void) line_number;
-
+(void)line_number;
+}

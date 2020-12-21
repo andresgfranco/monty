@@ -1,4 +1,4 @@
-#include "header_monty.h"
+#include "monty.h"
 /**
   * printerror - function to print corresponding error
   * @error: number of error

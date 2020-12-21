@@ -17,9 +17,4 @@ void printerror(int error, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if (error == 3)
-	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", line_number);
-		exit(EXIT_FAILURE);
-	}
 }

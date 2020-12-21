@@ -16,14 +16,14 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	OPFile = fopen(argv[1], "r");
 
 	if (OPFile == NULL)
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "Error: Can't open file %s", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while ((read = getline(&line, &len, OPFile)) != -1)

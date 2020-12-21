@@ -17,13 +17,13 @@ void op_push(stack_t **stack, unsigned int line_number)
 	stack_t *top_stack = (stack_t *) malloc(sizeof(stack_t));
 
 	if (top_stack == NULL)
-		exit(EXIT_FAILURE);
+		printerror(1, line_number);
 
 	if ((atoi(pushed_integer) == 0))
 	{
 		if (*pushed_integer != '0')
 		{
-			printerror(1, line_number);
+			printerror(2, line_number);
 		}
 	}
 

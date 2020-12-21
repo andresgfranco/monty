@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 			pushed_integer = token;
 			if ((strcmp(token_op, "push") == 0) && (token == NULL))
 			{
-				printerror(1, line_number);
+				printerror(2, line_number);
 			}
 			op_int_evaluator(token_op, &stack, line_number);
 			printf("This is token int: %s \n", token);

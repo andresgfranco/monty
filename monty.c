@@ -1,5 +1,5 @@
 #include "monty_header.h"
-/*
+/**
  * main - monty interpreter main function
  * @argc: number of arguments
  * @argv: array of arguments
@@ -43,4 +43,4 @@ int main(int argc, char *argv[])
 		}
 		line_number++;
 }
-return 0;
+return (0);

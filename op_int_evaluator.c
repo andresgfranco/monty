@@ -1,17 +1,19 @@
 #include "monty_header.h"
 /**
- * op_int_evaluator - function that will evaluate
- * the opcode and integer if provided
- * @opcode: given opcode
- * @unsigned int line_number: line number
+ * op_eva - function that will evaluate
+ * @given_opcode: the opcode provided
+ * @stack: double pointer to double linked list
+ * @line_number: line number
  * Return: void
 **/
-void op_int_evaluator(char *given_opcode, stack_t **stack, unsigned int line_number)
+void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 {
-	instruction_t opcode_func[] = {{"push", op_push}, {"pall", op_pall}, {NULL, NULL}};
+	instruction_t opcode_func[] = {{"push", op_push}, {"pall", op_pall},
+		{NULL, NULL}};
+
 	int counter = 0;
 
-	while(counter < 2)
+	while (counter < 2)
 	{
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)
 		{

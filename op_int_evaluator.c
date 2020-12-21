@@ -8,11 +8,10 @@
 **/
 void op_int_evaluator(char *given_opcode, stack_t **stack, unsigned int line_number)
 {
-	instruction_t opcode_func[] = {{"push", op_push}, {NULL, NULL}};
+	instruction_t opcode_func[] = {{"push", op_push}, {"pall", op_pall}, {NULL, NULL}};
 	int counter = 0;
 
-	printf("Antes de evaluar\n");
-	while(counter < 1)
+	while(counter < 2)
 	{
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)
 		{

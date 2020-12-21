@@ -26,15 +26,10 @@ int main(int argc, char *argv[])
 		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	else
-		puts("Abrio archivo");
-
 	while ((read = getline(&line, &len, OPFile)) != -1)
 	{
-		printf("%d ", line_number);
 		token = strtok(line, DELIM);
 		token_op = token;
-		printf("This is token_op: %s ", token_op);
 		while (token != NULL)
 		{
 			token = strtok(NULL, DELIM);
@@ -44,7 +39,6 @@ int main(int argc, char *argv[])
 				printerror(2, line_number);
 			}
 			op_int_evaluator(token_op, &stack, line_number);
-			printf("This is token int: %s \n", token);
 			break;
 		}
 		line_number++;

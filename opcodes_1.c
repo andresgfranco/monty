@@ -36,3 +36,22 @@ void op_push(stack_t **stack, unsigned int line_number)
 	(*stack) = top_stack;
 
 }
+/**
+* op_pall - Function that prints all the elements
+* of a list
+* @stack: doubly linked list working as a stack
+* @line_number: line number of the specified opcode
+* Return: number of nodes of type size_t
+**/
+void op_pall(stack_t **stack, unsigned int line_number)
+{
+
+stack_t *aux = *stack;
+
+while ((aux) != NULL)
+{
+printf("%d\n", (aux)->n);
+(aux) = (aux)->next;
+}
+(void) line_number;
+

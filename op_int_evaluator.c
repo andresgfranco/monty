@@ -18,8 +18,10 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)
 		{
 			opcode_func[counter].f(stack, line_number);
-			break;
+			exit;
 		}
 		counter++;
 	}
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, given_opcode);
+	exit(EXIT_FAILURE);
 }

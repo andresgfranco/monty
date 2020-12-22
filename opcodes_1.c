@@ -72,3 +72,29 @@ void op_pint(stack_t **stack, unsigned int line_number)
 	}
 	printf("%d\n", (*stack)->n);
 }
+
+/**
+ * op_pop - deletes the node at end
+ *@stack: Pointer to head
+ *@line_number: index
+ * Return: void
+ */
+int op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *head = *stack;
+
+	if (stack == NULL)
+		printerror(4, line_number);
+
+	if (head->next == NULL)
+	{
+		free(head);
+		*head = NULL;
+	}
+	else
+	{
+		*head = (*head)->next;
+		(*head)->prev = NULL;
+		free(head);
+	}
+}

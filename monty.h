@@ -56,4 +56,8 @@ char *pushed_integer;
 /**Error management function**/
 void printerror(int error, unsigned int line_number);
 
+/** free stack */
+void free_stack(stack_t *head);
+
+
 #endif /* MONTY_H */

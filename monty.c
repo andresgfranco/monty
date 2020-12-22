@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
 			break;
 		}
 		line_number++;
+		free_stack(*stack);
+		fclose(OPFile);
 }
-return (0);
+exit(EXIT_SUCCESS);
 }

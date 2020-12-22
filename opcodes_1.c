@@ -88,6 +88,7 @@ void op_pop(stack_t **stack, unsigned int line_number)
 
 	else if (head->prev == NULL && head->next == NULL)
 	{
+		head = NULL;
 		free(head);
 		*stack = NULL;
 	}

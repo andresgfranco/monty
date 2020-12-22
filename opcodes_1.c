@@ -109,35 +109,19 @@ void op_pop(stack_t **stack, unsigned int line_number)
 **/
 void op_swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *swap = (stack_t *) malloc(sizeof(stack_t));
+	int swap_aux;
 
 	if ((*stack) == NULL)
 		printerror(5, line_number);
 	else if ((*stack)->prev == NULL && (*stack)->next == NULL)
 	{
-		free(swap);
 		free_stack(*stack);
 		printerror(5, line_number);
 	}
 	else
 	{
-		swap->next = (*stack)->next;
-		if ((swap->next)->next == NULL)
-		{
-			(swap->next)->prev = NULL;
-			(swap->next)->next = (*stack);
-			(*stack)->prev = swap->next;
-			(*stack)->next = NULL;
-		}
-		else
-		{
-			(*stack)->next = (swap->next)->next;
-			(*stack)->prev = swap->next;
-			((*stack)->next)->prev = (*stack);
-			(swap->next)->next = (*stack);
-			(swap->next)->prev = NULL;
-		}
-		(*stack) = swap->next;
-		free(swap);
+		swap_aux = (*stack)->n;
+		(*stack)->n = ((*stack)->next)->n;
+		(*stack)->next->n = swap_aux;
 	}
 }

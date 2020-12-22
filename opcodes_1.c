@@ -46,13 +46,12 @@ void op_push(stack_t **stack, unsigned int line_number)
 **/
 void op_pall(stack_t **stack, unsigned int line_number)
 {
+	stack_t *aux = *stack;
 
-stack_t *aux = *stack;
-
-while ((aux) != NULL)
-{
-printf("%d\n", (aux)->n);
-(aux) = (aux)->next;
-}
-(void)line_number;
+	while ((aux) != NULL)
+	{
+		printf("%d\n", (aux)->n);
+		(aux) = (aux)->next;
+	}
+	(void)line_number;
 }

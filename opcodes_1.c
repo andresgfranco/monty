@@ -42,7 +42,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 * of a list
 * @stack: doubly linked list working as a stack
 * @line_number: line number of the specified opcode
-* Return: number of nodes of type size_t
+* Return: void
 **/
 void op_pall(stack_t **stack, unsigned int line_number)
 {
@@ -57,10 +57,11 @@ void op_pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pint - Function that prints the value at the top
+ * op_pint - Function that prints the value at the top
  * of the stack, followed by a new line.
- * @h: list as an argument
- * Return: number of nodes of type size_t
+* @stack: doubly linked list working as a stack
+* @line_number: line number of the specified opcode
+ * Return: void
 **/
 void op_pint(stack_t **stack, unsigned int line_number)
 {

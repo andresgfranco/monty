@@ -13,8 +13,10 @@ void op_push(stack_t **stack, unsigned int line_number)
 	stack_t *top_stack = (stack_t *) malloc(sizeof(stack_t));
 
 	if (top_stack == NULL)
+	{
+		free(top_stack);
 		printerror(1, line_number);
-
+	}
 	if ((atoi(pushed_integer) == 0))
 	{
 		if (*pushed_integer != '0')

@@ -43,6 +43,8 @@ int main(int argc, char *argv[])
 		}
 		line_number++;
 	}
+	free(line);
 	free_stack(stack);
+	fclose(OPFile);
 exit(EXIT_SUCCESS);
 }

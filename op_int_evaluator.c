@@ -22,6 +22,7 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 		}
 		counter++;
 	}
+	free_stack(*stack);
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, given_opcode);
 	exit(EXIT_FAILURE);
 }

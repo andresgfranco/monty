@@ -9,7 +9,7 @@ void printerror(int error, unsigned int line_number)
 {
 	if (error == 1)
 	{
-		fprintf(stderr, "Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 	if (error == 2)

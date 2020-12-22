@@ -48,7 +48,7 @@ void op_pint(stack_t **stack, unsigned int line_number);
 void op_pop(stack_t **stack, unsigned int line_number);
 
 /**DELIM**/
-#define DELIM " \n"
+#define DELIM " \n\t\r"
 
 /**Global variable pushed integer**/
 char *pushed_integer;

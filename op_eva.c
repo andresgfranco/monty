@@ -9,7 +9,7 @@
 void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 {
 	instruction_t opcode_func[] = {{"push", op_push}, {"pall", op_pall},
-		{"pint", op_pint}, {"pop", op_pop} {NULL, NULL}};
+		{"pint", op_pint}, {"pop", op_pop}, {NULL, NULL}};
 
 	int counter = 0;
 

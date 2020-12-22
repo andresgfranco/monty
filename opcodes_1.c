@@ -83,7 +83,7 @@ void op_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 
-	if (*stack == NULL)
+	if (head == NULL)
 		printerror(4, line_number);
 
 	if (head->prev == NULL && head->next == NULL)

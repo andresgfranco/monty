@@ -86,15 +86,16 @@ void op_pop(stack_t **stack, unsigned int line_number)
 	if (head == NULL)
 		printerror(4, line_number);
 
-	if (head->prev == NULL && head->next == NULL)
+	else if (head->prev == NULL && head->next == NULL)
 	{
 		free(head);
 		*stack = NULL;
 	}
-	if (head->next != NULL)
+	else if (head->next != NULL)
 	{
 		*stack = head->next;
 		(*stack)->prev = NULL;
+		head = NULL;
 		free(head);
 	}
 }

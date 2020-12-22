@@ -26,3 +26,24 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, given_opcode);
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * string_eva - function that will find a character
+ * different from numbers and minus at s[0]
+ * @pushed_integer: pushed integer
+ * Return: 1 if character different from number found
+ * or 0 if just numbers
+**/
+int string_eva(char *pushed_integer)
+{
+	int i;
+
+	for (i = 1; pushed_integer[i] != '\0'; i++)
+	{
+		if (pushed_integer[i] < 48 || pushed_integer[i] > 57)
+		{
+			return (1);
+		}
+	}
+	return (0);
+}

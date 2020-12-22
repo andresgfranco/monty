@@ -40,6 +40,7 @@ typedef struct instruction_s
 
 /**Function pointer that will evaluate opcode**/
 void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number);
+int string_eva(char *pushed_integer);
 
 /**opcodes functions**/
 void op_push(stack_t **stack, unsigned int line_number);

@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdbool.h>
 
 /**
  * op_push - Function that pushes an element
@@ -9,7 +10,6 @@
 **/
 void op_push(stack_t **stack, unsigned int line_number)
 {
-
 	stack_t *top_stack = (stack_t *) malloc(sizeof(stack_t));
 
 	if (top_stack == NULL)
@@ -18,15 +18,16 @@ void op_push(stack_t **stack, unsigned int line_number)
 		free_stack(*stack);
 		printerror(1, line_number);
 	}
-	if ((atoi(pushed_integer) == 0))
+	if (atoi(pushed_integer) == 0 || string_eva(pushed_integer) == 1)
 	{
-		if (*pushed_integer != '0' && pushed_integer[0] != '-')
+		if ((*pushed_integer != '0') && (pushed_integer[0] != '-'))
 		{
 			free(top_stack);
 			free_stack(*stack);
 			printerror(2, line_number);
 		}
 	}
+
 
 	top_stack->n = atoi(pushed_integer);
 	top_stack->next = (*stack);
@@ -106,15 +107,3 @@ void op_pop(stack_t **stack, unsigned int line_number)
 * Return: void
 */
 /* void op_swap(stack_t **stack, unsigned int line_number) */
-
-
-	
-
-
-
-
-
-
-
-
-

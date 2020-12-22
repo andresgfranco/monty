@@ -55,3 +55,19 @@ void op_pall(stack_t **stack, unsigned int line_number)
 	}
 	(void)line_number;
 }
+
+/**
+ * pint - Function that prints the value at the top
+ * of the stack, followed by a new line.
+ * @h: list as an argument
+ * Return: number of nodes of type size_t
+**/
+void op_pint(stack_t **stack, unsigned int line_number)
+{
+	if ((*stack) == NULL)
+	{
+		free_stack(*stack);
+		printerror(3, line_number);
+	}
+	printf("%d\n", (*stack)->n);
+}

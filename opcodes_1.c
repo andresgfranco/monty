@@ -15,8 +15,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 	if (top_stack == NULL)
 	{
 		free(top_stack);
-		if ((*stack) != NULL)
-			free_stack(*stack);
+		free_stack(*stack);
 		printerror(1, line_number);
 	}
 	if ((atoi(pushed_integer) == 0))

@@ -79,22 +79,22 @@ void op_pint(stack_t **stack, unsigned int line_number)
  *@line_number: index
  * Return: void
  */
-int op_pop(stack_t **stack, unsigned int line_number)
+void op_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 
-	if (stack == NULL)
+	if (*stack == NULL)
 		printerror(4, line_number);
 
-	if (head->next == NULL)
+	if (head->prev == NULL && head->next == NULL)
 	{
 		free(head);
-		*head = NULL;
+		*stack = NULL;
 	}
-	else
+	if (head->next != NULL)
 	{
-		*head = (*head)->next;
-		(*head)->prev = NULL;
+		*stack = head->next;
+		(*stack)->prev = NULL;
 		free(head);
 	}
 }

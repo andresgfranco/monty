@@ -24,7 +24,7 @@ void printerror(int error, unsigned int line_number)
 	}
 	if (error == 4)
 	{
-		fprintf(stderr, "L%d: can't pop, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pop an stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

@@ -20,7 +20,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 	}
 	if ((atoi(pushed_integer) == 0))
 	{
-		if (*pushed_integer != '0')
+		if (*pushed_integer != '0' && pushed_integer[0] != '-')
 		{
 			free(top_stack);
 			free_stack(*stack);
@@ -99,3 +99,22 @@ void op_pop(stack_t **stack, unsigned int line_number)
 		free(head);
 	}
 }
+/**
+* op_swap - deletes the node at end
+*@stack: Pointer to head
+*@line_number: index
+* Return: void
+*/
+/* void op_swap(stack_t **stack, unsigned int line_number) */
+
+
+	
+
+
+
+
+
+
+
+
+

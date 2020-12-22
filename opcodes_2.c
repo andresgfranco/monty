@@ -12,6 +12,15 @@ void op_add(stack_t **stack, unsigned int line_number)
 {
 	int a, b, c;
 
+	if ((*stack) == NULL)
+		printerror(6, line_number);
+	else if ((*stack)->prev == NULL && (*stack)->next == NULL)
+	{
+		free_stack(*stack);
+		printerror(6, line_number);
+	}
+
+
 	a = (*stack)->n;
 	b = (*stack)->next->n;
 	c = a + b;

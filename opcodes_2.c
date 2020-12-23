@@ -63,7 +63,8 @@ void op_sub(stack_t **stack, unsigned int line_number)
 	}
 	a = (*stack)->n;
 	b = (*stack)->next->n;
-	c = b - a;
+	c = a - b;
+	c *= -1;
 	op_pop(stack, line_number);
 	(*stack)->n = c;
 }

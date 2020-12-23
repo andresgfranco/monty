@@ -70,6 +70,8 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *aux = *stack;
 
+	int a = 0;
+
 	if ((*stack) == NULL)
 		printf("\n");
 	else
@@ -77,15 +79,13 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 		while ((aux) != NULL)
 		{
 			if ((aux->n <= 0 || aux->n > 127))
-				return;
+				break;
 			printf("%c", (aux)->n);
 			(aux) = (aux)->next;
-			if ((aux->n <= 0 || aux->n > 127))
-			{
-				printf("\n");
-				return;
-			}
+			a++;
 		}
+		if (a > 0)
+			printf("\n");
 	}
 	(void)line_number;
 }

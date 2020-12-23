@@ -53,6 +53,7 @@ void op_swap(stack_t **stack, unsigned int line_number);
 void op_add(stack_t **stack, unsigned int line_number);
 void op_nop(stack_t **stack, unsigned int line_number);
 void op_sub(stack_t **stack, unsigned int line_number);
+void op_div(stack_t **stack, unsigned int line_number);
 
 /**DELIM**/
 #define DELIM " \n\t\r"
@@ -62,6 +63,7 @@ char *pushed_integer;
 
 /**Error management function**/
 void printerror(int error, unsigned int line_number);
+void printerror1(int error, unsigned int line_number);
 
 /** free stack */
 void free_stack(stack_t *head);

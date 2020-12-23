@@ -48,13 +48,12 @@ void op_hashtag(stack_t **stack, unsigned int line_number)
 **/
 void op_pchar(stack_t **stack, unsigned int line_number)
 {
-	int n = (*stack)->n;
-
 	if ((*stack) == NULL)
 	{
+		free_stack(*stack);
 		printerror1(13, line_number);
 	}
-	if (n < 0 || n > 127)
+	if ((*stack)->n || (*stack)->n > 127)
 	{
 		printerror1(12, line_number);
 	}

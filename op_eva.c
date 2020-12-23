@@ -12,7 +12,7 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 		{"pint", op_pint}, {"pop", op_pop}, {"swap", op_swap}, {"add", op_add},
 		{"nop", op_nop}, {"sub", op_sub}, {"div", op_div},
 		{"mul", op_mul}, {"mod", op_mod}, {"#", op_hashtag}, {"pchar", op_pchar},
-		{NULL, NULL}};
+		{"pstr", op_pstr}, {NULL, NULL}};
 	int counter = 0;
 
 	if (strncmp(opcode_func[11].opcode, given_opcode, 1) == 0)
@@ -20,7 +20,7 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 		opcode_func[11].f(stack, line_number);
 		return;
 	}
-	while (counter < 13)
+	while (counter < 14)
 	{
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)
 		{

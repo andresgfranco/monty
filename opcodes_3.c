@@ -50,7 +50,7 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 {
 	int n = (*stack)->n;
 
-	if (!stack || !*stack)
+	if ((*stack) == NULL)
 	{
 		printerror1(13, line_number);
 	}

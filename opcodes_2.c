@@ -61,15 +61,9 @@ void op_sub(stack_t **stack, unsigned int line_number)
 		free_stack(*stack);
 		printerror(7, line_number);
 	}
-
-
 	a = (*stack)->n;
 	b = (*stack)->next->n;
 	c = b - a;
-
-
 	op_pop(stack, line_number);
-
 	(*stack)->n = c;
 }
-

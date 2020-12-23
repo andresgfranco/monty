@@ -40,7 +40,7 @@ void printerror(int error, unsigned int line_number)
 
 	if (error == 7)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n    ", line_number);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

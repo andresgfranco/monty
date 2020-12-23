@@ -44,7 +44,6 @@ In this repository you will find the entire project where we built our own versi
 - `op_hashtag` - reat the line as a comment (don’t do anything).
 - `op_pchar` - prints the char at the top of the stack, followed by a new line.
 - `op_pstr` - prints the string starting at the top of the stack, followed by a new line
-- `op_rotl` - rotate stack to the botton.
 - `printerror` - prints the corresponding error.
 - `printerror1` - prints the corresponding error.
 - `free_stack` - frees memory.

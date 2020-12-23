@@ -12,11 +12,11 @@ void op_mod(stack_t **stack, unsigned int line_number)
 int a, b, c;
 
 	if ((*stack) == NULL)
-		printerror(8, line_number);
+		printerror1(11, line_number);
 	else if ((*stack)->prev == NULL && (*stack)->next == NULL)
 	{
 		free_stack(*stack);
-		printerror(8, line_number);
+		printerror1(11, line_number);
 	}
 	a = (*stack)->n;
 	b = (*stack)->next->n;

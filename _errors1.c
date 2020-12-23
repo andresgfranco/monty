@@ -12,10 +12,15 @@ void printerror1(int error, unsigned int line_number)
 		fprintf(stderr, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
 	if (error == 10)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+	if (error == 11)
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
 }

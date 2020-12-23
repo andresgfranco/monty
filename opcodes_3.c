@@ -59,3 +59,33 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", (*stack)->n);
 }
+/**
+* op_pstr - Function that prints all the elements
+* of a list in ASCII code
+* @stack: doubly linked list working as a stack
+* @line_number: line number of the specified opcode
+* Return: void
+**/
+void op_pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *aux = *stack;
+
+	if ((*stack) == NULL)
+		printf("\n");
+	else
+	{
+		while ((aux) != NULL)
+		{
+			if ((aux->n <= 0 || aux->n > 127))
+				return;
+			printf("%c", (aux)->n);
+			(aux) = (aux)->next;
+			if ((aux->n <= 0 || aux->n > 127))
+			{
+				printf("\n");
+				return;
+			}
+		}
+	}
+	(void)line_number;
+}

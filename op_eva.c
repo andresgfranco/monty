@@ -9,11 +9,12 @@
 void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 {
 	instruction_t opcode_func[] = {{"push", op_push}, {"pall", op_pall},
-		{"pint", op_pint}, {"pop", op_pop}, {"swap", op_swap}, {"add", op_add}, {NULL, NULL}};
+		{"pint", op_pint}, {"pop", op_pop}, {"swap", op_swap}, {"add", op_add},
+		{"nop", op_nop}, {NULL, NULL}};
 
 	int counter = 0;
 
-	while (counter < 6)
+	while (counter < 7)
 	{
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)
 		{

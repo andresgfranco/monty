@@ -29,3 +29,16 @@ void op_add(stack_t **stack, unsigned int line_number)
 
 	(*stack)->n = c;
 }
+
+/**
+* op_nop - function that does nothing
+*@stack: Pointer to head
+*@line_number: doubly linked list working as a stack
+* Return: void
+**/
+void op_nop(stack_t **stack, unsigned int line_number)
+{
+	return;
+	(void)line_number;
+	(void)**stack;
+}

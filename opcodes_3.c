@@ -52,7 +52,6 @@ void op_pchar(stack_t **stack, unsigned int line_number)
 
 	if ((*stack) == NULL)
 	{
-		free_stack(*stack);
 		printerror1(13, line_number);
 	}
 	if (n < 0 || n > 127)

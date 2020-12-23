@@ -14,6 +14,10 @@ void op_eva(char *given_opcode, stack_t **stack, unsigned int line_number)
 		{"mul", op_mul}, {"mod", op_mod}, {"#", op_hashtag}, {NULL, NULL}};
 	int counter = 0;
 
+	if (strncmp(opcode_func[11].opcode, given_opcode, 1) == 0)
+	{
+			opcode_func[11].f(stack, line_number);
+	}
 	while (counter < 12)
 	{
 		if (strcmp(opcode_func[counter].opcode, given_opcode) == 0)

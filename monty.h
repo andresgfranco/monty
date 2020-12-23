@@ -58,6 +58,7 @@ void op_mul(stack_t **stack, unsigned int line_number);
 void op_mod(stack_t **stack, unsigned int line_number);
 void op_hashtag(stack_t **stack, unsigned int line_number);
 void op_pchar(stack_t **stack, unsigned int line_number);
+void op_pstr(stack_t **stack, unsigned int line_number);
 
 /**DELIM**/
 #define DELIM " \n\t\r"

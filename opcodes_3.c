@@ -27,4 +27,15 @@ int a, b, c;
 	op_pop(stack, line_number);
 	(*stack)->n = c;
 }
-
+/**
+* op_hashtag - function that does nothing
+*@stack: Pointer to head
+*@line_number: doubly linked list working as a stack
+* Return: void
+**/
+void op_hashtag(stack_t **stack, unsigned int line_number)
+{
+	return;
+	(void)line_number;
+	(void)**stack;
+}

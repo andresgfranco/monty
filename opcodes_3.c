@@ -78,7 +78,7 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 	{
 		while ((aux) != NULL)
 		{
-			if ((aux->n <= 0 || aux->n > 255))
+			if ((aux->n <= 0 || aux->n > 127))
 				break;
 			printf("%c", (aux)->n);
 			(aux) = (aux)->next;
